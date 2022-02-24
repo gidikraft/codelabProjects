@@ -16,7 +16,7 @@ export default StyleSheet.create({
 
     },
     basketIcon: {
-        marginTop: 270,
+        marginTop: 240,
         alignSelf: 'center',
         marginBottom: 10,
         
@@ -28,7 +28,7 @@ export default StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '400',
         fontSize: 35,
-        // fontStyle: Rasa
+        fontFamily: 'Rasa_400Regular'
     },
     footer: {
         color: THEME_COLOR,
@@ -36,12 +36,12 @@ export default StyleSheet.create({
         fontSize: 25,
         fontWeight: '700',
         fontStyle: 'normal',
-        // fontStyle: Rasa
-        marginTop: 170,
+        fontFamily: 'Rasa_400Regular',
+        marginTop: 140,
     },
     navigationView: {
         flexDirection: 'row',
-        marginTop: 30,
+        marginTop: 20,
         justifyContent: 'space-between',
         marginHorizontal: 30,
     },
@@ -50,7 +50,7 @@ export default StyleSheet.create({
         fontWeight: '700',
         fontSize: 25,
         fontStyle: 'normal',
-        // fontStyle: Rasa
+        fontFamily: 'Rasa_400Regular'
 
     }
 })

@@ -18,4 +18,5 @@ export const colors = {
     THEME_COLOR: '#FF8137',
     WHITE: "#FFFFFF",
     MENU_TEXT_COLOR: '#506992',
+    BLACK: '#000000',
 }

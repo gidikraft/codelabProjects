@@ -18,16 +18,18 @@ export default StyleSheet.create({
         fontWeight: '700',
         textAlign: 'center',
         color: BACKGROUND_COLOR,
-        marginTop: 60,
+        marginTop: 40,
+        fontFamily: 'Rasa_700Bold'
     },
     pageText: {
         fontSize: 22,
         fontStyle: 'normal',
         fontWeight: '400',
-        marginHorizontal: 60,
+        marginHorizontal: 65,
         textAlign: 'center',
         color: BACKGROUND_COLOR,
         marginTop: 20,
+        fontFamily: 'Rasa_400Regular'
     },
     passwordContainer: {
         flexDirection: 'row',
@@ -39,7 +41,7 @@ export default StyleSheet.create({
         borderBottomColor: THEME_COLOR,
     },
     input: {
-        // fontFamily: 'roboto',
+        fontFamily: 'Rasa_400Regular',
         fontWeight: 'normal',
         fontStyle: 'normal',
         fontSize: 16,
@@ -47,11 +49,13 @@ export default StyleSheet.create({
         marginLeft: 20,
     },
     visibilityIcon: {
-        marginLeft: 200,
+        marginLeft: 210,
+        // left: 200,
         alignSelf: 'baseline',
     },
     checkBox: {
         marginHorizontal: 20,
+        fontFamily: 'Rasa_400Regular'
     },
     forgotPassword: {
         fontSize: 22,
@@ -61,6 +65,7 @@ export default StyleSheet.create({
         color: THEME_COLOR,
         marginTop: 20,
         textDecorationLine: "underline",
+        fontFamily: 'Rasa_400Regular'
     },
     continue: {
         fontSize: 16,
@@ -69,6 +74,7 @@ export default StyleSheet.create({
         textAlign: 'center',
         color: BACKGROUND_COLOR,
         marginTop: 20,
+        fontFamily: 'Rasa_400Regular'
     },
     button: {
         backgroundColor: BACKGROUND_COLOR,
@@ -76,7 +82,7 @@ export default StyleSheet.create({
         height: 48,
         width: 289,
         borderRadius: 9,
-        marginTop: 50,
+        marginTop: 40,
         alignItems: 'center',
         justifyContent: 'center',
         flexDirection: 'row',
@@ -87,6 +93,7 @@ export default StyleSheet.create({
         fontWeight: '500',
         textAlign: 'center',
         color: WHITE,
+        fontFamily: 'Rasa_500Medium'
     },
     loginChoice: {
         flexDirection: 'row',
@@ -99,16 +106,17 @@ export default StyleSheet.create({
         height: 48,
         borderWidth: 2,
         borderRadius: 8,
-        marginTop: 30,
+        marginTop: 20,
         borderColor: MENU_TEXT_COLOR,
         justifyContent: 'center',
         alignItems: 'center',
     },
     facebook: {
-
+        
     },
     loginChoiceText: {
         marginLeft: 10,
+        fontFamily: 'Rasa_500Medium'
     },
     footerView: {
         flexDirection: 'row',
@@ -122,6 +130,7 @@ export default StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: 'normal',
         textAlign: 'center',
+        fontFamily: 'Rasa_400Regular'
     },
     signUp: {
         color: THEME_COLOR,
@@ -129,6 +138,7 @@ export default StyleSheet.create({
         fontStyle: 'normal',
         fontWeight: '600',
         textAlign: 'center',
+        fontFamily: 'Rasa_500Medium'
     }
 })
 

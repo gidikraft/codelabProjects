@@ -21,12 +21,12 @@ export default StyleSheet.create({
     searchIcon: {
         left: 60, 
         top: 51, 
-        zIndex: 2
+        zIndex: 2,
     },
     input: {
         height: 32,
         width: 250,
-        // fontFamily: 'roboto',
+        fontFamily: 'Rasa_400Regular',
         fontWeight: 'normal',
         fontStyle: 'normal',
         fontSize: 16,
@@ -66,13 +66,16 @@ export default StyleSheet.create({
         fontWeight: '600',
         color: BACKGROUND_COLOR,
         letterSpacing: 0.3,
+        fontFamily: 'Rasa_500Medium'
+
     },
-    userEmail: {
+    userPassword: {
         fontSize: 18,
         fontStyle: 'normal',
         fontWeight: '400',
         color: BACKGROUND_COLOR,
         letterSpacing: 0.3,
+        fontFamily: 'Rasa_400Regular',
 
     },
     dashboardView: {
@@ -84,14 +87,16 @@ export default StyleSheet.create({
     notificationView: {
         flexDirection: 'row',
         marginHorizontal: 90,
-        paddingVertical: 20,
+        paddingVertical: 16,
     },
-    notification: {
+    dashboardMenu: {
         marginLeft: 30,
         fontSize: 22,
         fontStyle: 'normal',
         fontWeight: '600',
         color: BACKGROUND_COLOR,
         letterSpacing: 0.3,
+        fontFamily: 'Rasa_500Medium'
+
     }
 })

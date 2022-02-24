@@ -18,7 +18,6 @@ export default function LoginComponent() {
     const navigation = useNavigation();
 
     const [form, setForm] = useState({});
-    const [data, setData] = useState({});
     const [check, setCheck] = useState(false);
     const [securePassword, setSecurePassword] = useState(true);
     const [isRegistraionSuccess, setIsRegistraionSuccess] = useState(false);
@@ -32,37 +31,25 @@ export default function LoginComponent() {
         signUp()
     }
 
-    const handleSubmitButton = () => {
-        // const emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-        // "[a-zA-Z0-9_+&*-]+)*@" +
-        // "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-        // "A-Z]{2,7}$";
+    // const handleSubmitButton = () => {
+    //     const emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+    //     "[a-zA-Z0-9_+&*-]+)*@" +
+    //     "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+    //     "A-Z]{2,7}$";
 
-        // if (form.email.match(emailRegex)){
-        //     console.log(form.emailAddress);
-        // } else {
-        //     ToastAndroid.show("Please enter valid email!", ToastAndroid.SHORT);
-        // }
-
-        // if (form.password.trim() != ""){
-        //     console.log(form.firstName)
-        // } else {
-        //     ToastAndroid.show("Please enter valid password", ToastAndroid.SHORT);
-        // }
-    //     if (!email) {
-    //       alert('Please fill Email');
-    //       return;
-    //     }
-    //     if (!username) {
-    //       alert('Please fill username');
-    //       return;
-    //     }
-    //     if (!userPassword) {
-    //       alert('Please fill Password');
-    //       return;
+    //     if (form.email.match(emailRegex)){
+    //         setIsRegistraionSuccess(true);
+    //     } else {
+    //         ToastAndroid.show("Please enter valid email!", ToastAndroid.SHORT);
     //     }
 
-    }
+    //     if (form.password.trim() != ""){
+    //         setIsRegistraionSuccess(true);
+    //     } else {
+    //         ToastAndroid.show("Please enter valid password", ToastAndroid.SHORT);
+    //     }
+    //     
+    // }
 
     const bottomNavigation = () => navigation.navigate('BottomNavigation');
 
@@ -79,7 +66,6 @@ export default function LoginComponent() {
             })
         })
         .then((response) => response.json())
-        // .then((json) => setData(json)) 
         .then((responseJson) => {
             console.log(responseJson)
             // if (responseJson.status === 'success') {
@@ -117,6 +103,7 @@ export default function LoginComponent() {
                     secureTextEntry={securePassword}
                     placeholderTextColor='#112D42'
                     underlineColorAndroid={'transparent'}
+                    maxLength={10}
                     />
                 <Ionicons 
                     style={styles.visibilityIcon} 

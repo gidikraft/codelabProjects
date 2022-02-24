@@ -24,7 +24,7 @@ export default StyleSheet.create({
         fontWeight: '400',
         textAlign: 'center',
         color: WHITE,
-
+        fontFamily: 'Rasa_400Regular'
     },
     basketText: {
         fontSize: 45,
@@ -32,16 +32,16 @@ export default StyleSheet.create({
         fontWeight: '700',
         textAlign: 'center',
         color: WHITE,
-
+        fontFamily: 'Rasa_700Bold'
     },
     basketLineText: {
         fontSize: 22,
         fontStyle: 'normal',
         fontWeight: '400',
-        marginHorizontal: 26,
+        marginHorizontal: 40,
         textAlign: 'center',
         color: WHITE,
-
+        fontFamily: 'Rasa_400Regular'
     },
     welcomeImage: {
         alignSelf: 'center',
@@ -65,7 +65,7 @@ export default StyleSheet.create({
         fontStyle: 'normal',
         fontSize: 22,
         color: WHITE,
-
+        fontFamily: 'Rasa_500Medium'
     },
     buttonArrow: {
         marginLeft: 50,

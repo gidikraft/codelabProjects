@@ -32,42 +32,42 @@ export default function DashboardComponent() {
                     <Image source={require('../../assets/profileImage.png')} style={styles.profileImage}/>
                     <View style={styles.userProfileView}>
                         <Text style={styles.username} >Daniel Obi</Text>
-                        <Text style={styles.userEmail}>danielobi@gmail.com</Text>
+                        <Text style={styles.userPassword}>danielobi@gmail.com</Text>
                     </View>
                 </View>
             </View>
             <View style={styles.dashboardView}>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/bell.png')} />
-                    <Text style={styles.notification}>Notification</Text>
+                    <Text style={styles.dashboardMenu}>Notification</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/registration.png')} />
-                    <Text style={styles.notification}>Edit Profile</Text>
+                    <Text style={styles.dashboardMenu}>Edit Profile</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/wishlist.png')} />
-                    <Text style={styles.notification}>Wishlist</Text>
+                    <Text style={styles.dashboardMenu}>Wishlist</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/activityHistory.png')} />
-                    <Text style={styles.notification}>Order History</Text>
+                    <Text style={styles.dashboardMenu}>Order History</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/tracking.png')} />
-                    <Text style={styles.notification}>Track Order</Text>
+                    <Text style={styles.dashboardMenu}>Track Order</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/cardPayment.png')} />
-                    <Text style={styles.notification}>Payment option</Text>
+                    <Text style={styles.dashboardMenu}>Payment option</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/settings.png')} />
-                    <Text style={styles.notification}>Settings</Text>
+                    <Text style={styles.dashboardMenu}>Settings</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/logout.png')} />
-                    <Text style={styles.notification} onPress={() => navigation.navigate('Onboarding')}>Log out</Text>
+                    <Text style={styles.dashboardMenu} onPress={() => navigation.navigate('Onboarding')}>Log out</Text>
                 </View>
             </View>
         </View>
