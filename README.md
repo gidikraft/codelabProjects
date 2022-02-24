@@ -1,4 +1,4 @@
-# codelabProjects
+# Codelab Projects
 
 # Problem Description
 Using the figma design files and the login api link below, create a
