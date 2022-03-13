@@ -4,7 +4,6 @@ import OnboardingScreen from './screens/onboardingScreen/OnboardingScreen';
 import WelcomeScreen from './screens/welcomeScreen/WelcomeScreen';
 import LoginScreen from './screens/loginScreen/LoginScreen';
 import BottomNavigation from './navigation/BottomNavigation';
-// import { useFonts, Inter_900Black } from '@expo-google-fonts/inter';
 import { useFonts, Rasa_300Light, Rasa_400Regular , Rasa_700Bold, Rasa_500Medium} from '@expo-google-fonts/rasa';
 import AppLoading from 'expo-app-loading';
 
@@ -13,7 +12,6 @@ const Stack = createNativeStackNavigator();
 export default function App() {
 
   let [fontsLoaded] = useFonts({
-    // Inter_900Black,
     Rasa_300Light,
     Rasa_400Regular,
     Rasa_700Bold,

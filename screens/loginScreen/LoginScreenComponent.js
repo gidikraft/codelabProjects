@@ -12,44 +12,42 @@ import { CheckBox } from 'react-native-elements';
 import { Ionicons } from '@expo/vector-icons';
 import { Feather } from '@expo/vector-icons';
 
-
-
 export default function LoginComponent() {
     const navigation = useNavigation();
 
     const [form, setForm] = useState({});
     const [check, setCheck] = useState(false);
     const [securePassword, setSecurePassword] = useState(true);
-    const [isRegistraionSuccess, setIsRegistraionSuccess] = useState(false);
+    const [error, setError] = useState('')
 
     const signUpURL = 'https://kasppe.com.ng/farmsolhub/wp-json/niishcloud_api/v1/login/'
+    // const signUpURL = 'https://clads-service.herokuapp.com/api/v1/customer/register'
 
     const onChange = ({ name, value }) => setForm({...form, [name]: value});
 
     const onSubmit = () => {
-        console.log('form :>>', form)
-        signUp()
+        handleSubmitButton()
     }
 
-    // const handleSubmitButton = () => {
-    //     const emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
-    //     "[a-zA-Z0-9_+&*-]+)*@" +
-    //     "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
-    //     "A-Z]{2,7}$";
+    const handleSubmitButton = () => {
+        const emailRegex = "^[a-zA-Z0-9_+&*-]+(?:\\."+
+        "[a-zA-Z0-9_+&*-]+)*@" +
+        "(?:[a-zA-Z0-9-]+\\.)+[a-z" +
+        "A-Z]{2,7}$";
 
-    //     if (form.email.match(emailRegex)){
-    //         setIsRegistraionSuccess(true);
-    //     } else {
-    //         ToastAndroid.show("Please enter valid email!", ToastAndroid.SHORT);
-    //     }
+        if (form.email.match(emailRegex)){
+            signUp()
+        } else {
+            ToastAndroid.show("Please enter valid email!", ToastAndroid.SHORT);
+        }
 
-    //     if (form.password.trim() != ""){
-    //         setIsRegistraionSuccess(true);
-    //     } else {
-    //         ToastAndroid.show("Please enter valid password", ToastAndroid.SHORT);
-    //     }
-    //     
-    // }
+        if (form.password.trim() != ""){
+            signUp()
+        } else {
+            ToastAndroid.show("Please enter valid password", ToastAndroid.SHORT);
+        }
+        
+    }
 
     const bottomNavigation = () => navigation.navigate('BottomNavigation');
 
@@ -58,21 +56,28 @@ export default function LoginComponent() {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json; charset=UTF-8',
+                // 'Content-type': 'application/json;'
             },
             body: JSON.stringify({
                 username: form.email,
                 email: form.email,
                 password: form.password,
+                // email: form.email,
+                // password: form.password,
             })
         })
         .then((response) => response.json())
         .then((responseJson) => {
             console.log(responseJson)
-            // if (responseJson.status === 'success') {
-            //     setIsRegistraionSuccess(true)
-            //     console.log(response.message)
-            // }
+            if (responseJson.status === 'success') {
+                bottomNavigation()                // navigate to dashboard only if user is succesfully registered
+                console.log(response.message)
+            }
             
+        })
+        .catch((error) => {
+            setError(error)
+            console.log(error);
         })
     }
 
@@ -123,26 +128,35 @@ export default function LoginComponent() {
             <TouchableOpacity style={styles.button} onPress={onSubmit}>
                 <Text style={styles.buttonText}>LOGIN</Text>
             </TouchableOpacity>
-            <Text style={styles.forgotPassword} onPress={() => {console.log('clicked Forgot password')}}>Forgot password</Text>
+            {/* button set up to navigate without validation and sign up */}
+            <Text style={styles.forgotPassword} onPress={bottomNavigation}>Forgot password</Text>
             <Text style={styles.continue}>- Or continue with -</Text>
             <View style={styles.loginChoice}>
                 <View style={styles.facebookView}>
                     <Image source={require('../../assets/Facebook.png')} />
-                    <Text style={styles.loginChoiceText}>
-                        Facebook
+                    <Text 
+                        onPress={() => {console.log('form :>>', form)}}
+                        style={styles.loginChoiceText}
+                    >Facebook
                     </Text>
                 </View>
                 <View style={styles.facebookView}>
                     <Image source={require('../../assets/Google.png')} />                    
-                    <Text style={styles.loginChoiceText}>
-                        Google
+                    <Text 
+                        onPress={() => {console.log('form :>>', form)}}
+                        style={styles.loginChoiceText}
+                    >Google
                     </Text>
                 </View>
                 
             </View>
             <View style={styles.footerView}>
                 <Text style={styles.signUpChoice}>Don’t have an account?</Text>
-                <Text style={styles.signUp} onPress={bottomNavigation}>Sign up</Text>
+                <Text 
+                    style={styles.signUp} 
+                    onPress={() => {console.log('form :>>', form)}}
+                >Sign up
+                </Text>
             </View>
         </View>
     )

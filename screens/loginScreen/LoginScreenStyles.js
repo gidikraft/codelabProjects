@@ -1,12 +1,15 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, useWindowDimensions } from 'react-native';
 import { colors } from '../../utils';
 
 const { BACKGROUND_COLOR, THEME_COLOR, MENU_TEXT_COLOR,  WHITE } = colors;
+const { deviceHeight, deviceWidth } = useWindowDimensions();
 
 export default StyleSheet.create({
     container: {
         flex: 1,
         backgroundColor: WHITE,
+        height: deviceHeight,
+        width: deviceWidth
     },
     headerImage: {
         alignSelf: 'center',

@@ -39,7 +39,7 @@ export default function DashboardComponent() {
             <View style={styles.dashboardView}>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/bell.png')} />
-                    <Text style={styles.dashboardMenu}>Notification</Text>
+                    <Text style={styles.dashboardMenu} onPress={() => navigation.navigate('Onboarding')}>Notification</Text>
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/registration.png')} />
@@ -67,7 +67,7 @@ export default function DashboardComponent() {
                 </View>
                 <View style={styles.notificationView}>
                     <Image source={require('../../assets/logout.png')} />
-                    <Text style={styles.dashboardMenu} onPress={() => navigation.navigate('Onboarding')}>Log out</Text>
+                    <Text style={styles.dashboardMenu} onPress={() => navigation.navigate('Login')}>Log out</Text>
                 </View>
             </View>
         </View>
